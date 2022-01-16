@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P5Q-mq-BST">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Air Quality Monitoring-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CityAQIController" customModule="AQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="z2g-Ho-gVL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityAQICell" rowHeight="60" id="iVp-Cr-lC0" customClass="CityAQICell" customModule="AQI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iVp-Cr-lC0" id="k5v-ez-JyV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-HU-JKz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXJ-Zi-TXN" customClass="LableWithBorder" customModule="AQI" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-nT-4FV" customClass="LableWithBorder" customModule="AQI" customModuleProvider="target">
+                                                            <rect key="frame" x="138" y="0.0" width="138" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sr9-dn-EMS" customClass="LableWithBorder" customModule="AQI" customModuleProvider="target">
+                                                            <rect key="frame" x="276" y="0.0" width="138" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fv4-HU-JKz" firstAttribute="top" secondItem="k5v-ez-JyV" secondAttribute="top" id="3uX-9T-EME"/>
+                                                <constraint firstAttribute="trailing" secondItem="fv4-HU-JKz" secondAttribute="trailing" id="9TU-Ib-zmu"/>
+                                                <constraint firstAttribute="bottom" secondItem="fv4-HU-JKz" secondAttribute="bottom" id="KTV-Je-3nN"/>
+                                                <constraint firstItem="fv4-HU-JKz" firstAttribute="leading" secondItem="k5v-ez-JyV" secondAttribute="leading" id="jxU-G4-L8c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCityAQI" destination="wFe-nT-4FV" id="SlA-f4-hfM"/>
+                                            <outlet property="lblCityName" destination="PXJ-Zi-TXN" id="ahr-GJ-k1S"/>
+                                            <outlet property="lblUpdatedTime" destination="sr9-dn-EMS" id="AZs-Hv-H3k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z2g-Ho-gVL" secondAttribute="trailing" id="7L3-9s-Hs8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z2g-Ho-gVL" secondAttribute="bottom" id="Hpc-vS-MAx"/>
+                            <constraint firstItem="z2g-Ho-gVL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gzb-jb-YNf"/>
+                            <constraint firstItem="z2g-Ho-gVL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kBM-1M-OIm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Air Quality Monitoring" id="UXX-xj-uhX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="3BR-4y-Juz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="z2g-Ho-gVL" id="Fjt-8e-dv7"/>
+                        <segue destination="FmS-tN-GSo" kind="show" identifier="AqiToChart" id="4vN-yc-vFU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="22.767857142857142"/>
+        </scene>
+        <!--CityAQI Chart Controller-->
+        <scene sceneID="2Yg-ef-Z5b">
+            <objects>
+                <viewController storyboardIdentifier="CityAQIChartController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FmS-tN-GSo" customClass="CityAQIChartController" customModule="AQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qyz-a8-Ja8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eES-lI-Az7" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eb1-Sg-pyM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eb1-Sg-pyM" firstAttribute="trailing" secondItem="eES-lI-Az7" secondAttribute="trailing" id="3zI-uf-KnS"/>
+                            <constraint firstItem="eb1-Sg-pyM" firstAttribute="bottom" secondItem="eES-lI-Az7" secondAttribute="bottom" id="JWa-HC-xVg"/>
+                            <constraint firstItem="eES-lI-Az7" firstAttribute="leading" secondItem="eb1-Sg-pyM" secondAttribute="leading" id="lQk-EP-BBX"/>
+                            <constraint firstItem="eES-lI-Az7" firstAttribute="top" secondItem="eb1-Sg-pyM" secondAttribute="top" id="v6v-Y5-LQY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xqx-bA-gaW"/>
+                    <connections>
+                        <outlet property="chartView" destination="eES-lI-Az7" id="aoe-Jd-fmV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CE9-KE-xrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jkc-Ui-Qhx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P5Q-mq-BST" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLa-pr-UN5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YBW-1k-GTs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRL-Jb-7qk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="22.767857142857142"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="PXJ-Zi-TXN">
+            <size key="intrinsicContentSize" width="35.5" height="17"/>
+        </designable>
+        <designable name="sr9-dn-EMS">
+            <size key="intrinsicContentSize" width="35.5" height="17"/>
+        </designable>
+        <designable name="wFe-nT-4FV">
+            <size key="intrinsicContentSize" width="35.5" height="17"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
